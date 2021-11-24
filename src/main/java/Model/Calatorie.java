@@ -2,23 +2,26 @@ package Model;
 
 import java.time.LocalDateTime;
 
-public class Comanda {
+public class Calatorie {
     private int id;
     private String client;
     private LocalDateTime data;
-    private String adresa;
+    private String agent;
+    private String destinatie;
 
-    public Comanda(String client, String data, String adresa) {
+    public Calatorie(String client, String data, String agent, String destinatie) {
         this.client = client;
         this.data = convertStringLocalDateTime(data);
-        this.adresa = adresa;
+        this.agent=agent;
+        this.destinatie=destinatie;
     }
 
-    public Comanda(int id, String client, String data, String adresa) {
+    public Calatorie(int id, String client, String data, String agent, String destinatie) {
         this.id = id;
         this.client = client;
         this.data = convertStringLocalDateTime(data);
-        this.adresa = adresa;
+        this.destinatie=destinatie;
+        this.agent=agent;
     }
 
     public int getId() {
@@ -45,12 +48,20 @@ public class Comanda {
         this.data = data;
     }
 
-    public String getAdresa() {
-        return adresa;
+    public String getAgent() {
+        return agent;
     }
 
-    public void setAdresa(String adresa) {
-        this.adresa = adresa;
+    public void setAgent(String agent) {
+        this.agent = agent;
+    }
+
+    public String getDestinatie() {
+        return destinatie;
+    }
+
+    public void setDestinatie(String destinatie) {
+        this.destinatie = destinatie;
     }
 
     @Override
@@ -58,8 +69,9 @@ public class Comanda {
         return "Comanda{" +
                 "id=" + id +
                 ", client='" + client + '\'' +
+                ", agent='" + agent + '\'' +
                 ", data=" + data +
-                ", adresa='" + adresa + '\'' +
+                ", destinatie='" + destinatie + '\'' +
                 '}';
     }
 

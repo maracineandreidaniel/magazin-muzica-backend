@@ -1,17 +1,17 @@
 package Model;
 
-public class Vanzator {
+public class Agent {
     private int id;
     private String nume;
     private String parola;
 
-    public Vanzator(int id, String nume, String parola){
+    public Agent(int id, String nume, String parola){
         this.id=id;
         this.nume=nume;
         this.parola=parola;
     }
 
-    public Vanzator(String nume, String parola){
+    public Agent(String nume, String parola){
         this.nume=nume;
         this.parola=parola;
     }
@@ -42,7 +42,7 @@ public class Vanzator {
 
     @Override
     public String toString() {
-        return "Vanzator{" +
+        return "Agent{" +
                 "id=" + id +
                 ", nume='" + nume + '\'' +
                 ", parola='" + parola + '\'' +
